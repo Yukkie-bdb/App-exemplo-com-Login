@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginAppExemplo.Pages.LoginPage"
+             Title="LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#038C7F"/>
+    </ContentPage.Behaviors>
+    
+    <VerticalStackLayout
+        Margin="15"
+        Padding="15"
+        Spacing="5">
+
+        <Image HeightRequest="250" WidthRequest="350" Source="logo.svg"/>
+
+        <Label 
+            Text="Login"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="Title"/>
+
+        <Label
+            x:Name="LBLEmail"
+            Text="Email"
+            TextColor="White"
+            FontSize="Subtitle"/>
+
+        <Entry
+            x:Name="TXTEmail"
+            Placeholder="Bota teu email aqui man"
+            Keyboard="Email"/>
+
+        <Label
+            x:Name="LBLSenha"
+            Text="Email"
+            TextColor="White"
+            FontSize="Subtitle"/>
+
+        <Entry
+            x:Name="TXTSenha"
+            Placeholder="Bota teu Senha aqui man 2"
+            Keyboard="Text"
+            IsPassword="True"/>
+
+        <Button
+            x:Name="BTNEntar"
+            Text="Entre"
+            TextColor="Black"
+            WidthRequest="250"
+            BackgroundColor="#F2E7DC"
+            Clicked="BTNEntar_Clicked"/>
+        <Button
+            x:Name="BTNRegistar"
+            Text="Registar"
+            TextColor="Black"
+            WidthRequest="250"
+            BackgroundColor="#F2E7DC"
+            Clicked="BTNRegistar_Clicked"/>
+
+
+
+    </VerticalStackLayout>
+    
+</ContentPage>
